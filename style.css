@@ -1,0 +1,329 @@
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+body {
+    height: 2000px;
+    font-family: "Open Sans", sans-serif;
+}
+
+#header.header.transparent {
+    background: transparent;
+}
+
+#header {
+    z-index: 997;
+    height: 80px;
+    transition: all 0.5s;
+}
+
+#header.header-scrolled {
+    height: 60px;
+    background: rgba(25, 28, 31, 0.8);
+}
+
+#header .navbar {
+    padding: 1rem 0;
+}
+
+#header .navbar-nav .nav-link {
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 15px;
+    letter-spacing: 1px;
+    font-family: "Raleway", sans-serif;
+}
+
+#header li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffb727;
+    transition: all 0.3s ease;
+}
+
+#header li a:hover::after {
+    width: 100%;
+}
+
+#header li a:hover {
+    color: #ffb727;
+}
+
+#header .navbar-nav .nav-link.active {
+    color: #ffb727; /* Ubah dengan warna yang Anda inginkan */
+}
+
+.hero::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.hero {
+    background: url("img/bg-hero.jpg") top right no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero-container {
+    padding: 0 15px;
+}
+
+.hero-container h1 {
+    margin: 0 0 15px 0;
+    font-size: 64px;
+    font-family: "Satisfy", serif;
+}
+
+.hero-container h2 {
+    font-family: "Raleway", sans-serif;
+    color: #eee;
+    margin-bottom: 50px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.btn-scroll {
+    /* border: 1px solid rgba(255, 255, 255, 0.6); */
+    transition: 0.4s;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 10px 0;
+    font-size: 40px;
+    animation: taswah 2s ease-in-out infinite alternate-reverse both;
+    animation-delay: 1s;
+}
+
+.btn-scroll:hover {
+    /* border: 1px solid #ffb727; */
+    color: #ffb727;
+}
+
+@keyframes taswah {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.page-section {
+    padding: 8rem 0;
+}
+
+.section-title {
+    padding: 30px 0;
+    position: relative;
+}
+
+.section-title span {
+    top: 30px;
+    color: #eef0f2;
+    font-size: 52px;
+    line-height: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: #3b434a;
+    font-family: "Raleway", sans-serif;
+}
+
+.section-title p {
+    font-size: 16px;
+    color: #5e5e5e;
+    margin-bottom: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+.foto-pp {
+    min-height: 300px;
+}
+
+.list-about {
+    font-family: "Open Sans", sans-serif;
+}
+
+.list-about li {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.bi-chevron-right {
+    color: #ffb727;
+    margin-right: 10px;
+}
+
+.list-about li strong {
+    margin-right: 10px;
+}
+
+.skills h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 26px;
+    color: #3b434a;
+    font-weight: 700;
+}
+
+.skill-list h5 {
+    margin-top: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #5e5e5e;
+    text-decoration: underline;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.skill-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+.skill-items img {
+    margin: 5px;
+}
+
+.book-box {
+    position: relative;
+    display: block;
+}
+
+.book-box .book-image {
+    overflow: hidden;
+    /* width: 200px; */
+}
+
+.book-box .book-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    color: #fff;
+    background: rgba(104, 104, 104, 0.8);
+    transition: opacity 0.25s ease;
+    text-align: center;
+}
+
+.book-box .book-overlay:hover {
+    opacity: 1;
+}
+
+.book-overlay h5 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.book-overlay p {
+    font-size: 1.2rem;
+}
+
+#contact form {
+    /* width: 100%; */
+    max-width: 100%;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+    padding: 27px;
+}
+
+#contact input {
+    padding: 1rem 0.75rem;
+}
+
+#contact textarea {
+    padding: 1rem 0.75rem;
+}
+
+#contact .btn-submitku {
+    border: #ffb727 1px solid;
+    transition: all 0.25s ease;
+    background-color: #ffb727;
+    color: #fff;
+}
+#contact .btn-submitku:hover {
+    background-color: #f9a600;
+}
+
+#footer {
+    background: url("img/hero-bg.jpg") center center no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+}
+
+#footer::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#footer h3 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Satisfy", sans-serif;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px #5e5e5e;
+}
+
+#footer p {
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+}
+
+#footer .social-links {
+    margin: 0 0 40px 0;
+}
+
+#footer .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #ffb727;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 10px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+#footer .social-links a:hover {
+    background: #fff;
+    color: #ffb727;
+    text-shadow: 2px 2px 4px #5e5e5e;
+    text-decoration: none;
+}
